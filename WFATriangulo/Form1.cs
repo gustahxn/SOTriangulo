@@ -19,9 +19,32 @@ namespace WFATriangulo
 
         private void cmbForma_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (cmbForma.Text)
+            {
+                case "Quadrado":
+                    SelecionarQuadrado();
+                    break;
+                case "Triangulo":
+                    break;
+                default:
+                    break;
+
+            }
             SelecionarTriângulos();
+            txtBase.Visible = cmbForma.Text.Equals("Quadrado");
 
         }
+
+        private void SelecionarQuadrado()
+        {
+            ExibirBase(true);
+            ExibitAltura(false);
+            lblRaio.Visible = txtraio.Visible = false;
+            txtArea.Visible = lblArea.Visible = false;
+
+
+        }
+
 
         private void cmbTriangulo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -29,13 +52,36 @@ namespace WFATriangulo
         }
         public void SelecionarTriângulos()
         {
+            ExibirBase(true);
             cmbTriangulo.Visible = cmbForma.Text.Equals("Triângulo");
-            lblbase.Visible = cmbForma.Text.Equals("Triângulo");
-            txtBase.Visible = cmbForma.Text.Equals("Triângulo");
             lblArea.Visible = cmbForma.Text.Equals("Triângulo");
             txtArea.Visible = cmbForma.Text.Equals("Triângulo");
-            txtaltura.Visible = cmbForma.Text.Equals("Triângulo");
-            lblAltura.Visible = cmbForma.Text.Equals("Triângulo");
+
+        }
+
+
+        void ExibirBase(bool visivel)
+        {
+            lblbase.Visible = txtBase.Visible = visivel;
+        }
+
+
+        private void ExibitAltura(bool visivel)
+        {
+            lblAltura.Visible = txtaltura.Visible = visivel;
+        }
+        
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            if(cmbForma.Text.Equals("Quadrado"))
+            {
+
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

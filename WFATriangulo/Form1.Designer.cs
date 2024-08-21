@@ -35,7 +35,7 @@
             this.lblArea = new System.Windows.Forms.Label();
             this.cmbObjetos = new System.Windows.Forms.ComboBox();
             this.btnCriar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtraio = new System.Windows.Forms.TextBox();
             this.lblRaio = new System.Windows.Forms.Label();
             this.txtBase = new System.Windows.Forms.TextBox();
             this.txtaltura = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.lblArea);
             this.groupBox1.Controls.Add(this.cmbObjetos);
             this.groupBox1.Controls.Add(this.btnCriar);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtraio);
             this.groupBox1.Controls.Add(this.lblRaio);
             this.groupBox1.Controls.Add(this.txtBase);
             this.groupBox1.Controls.Add(this.txtaltura);
@@ -68,10 +68,11 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(423, 166);
+            this.textBox4.Location = new System.Drawing.Point(410, 166);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 13;
@@ -79,7 +80,7 @@
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(364, 169);
+            this.lblPerimetro.Location = new System.Drawing.Point(340, 173);
             this.lblPerimetro.Name = "lblPerimetro";
             this.lblPerimetro.Size = new System.Drawing.Size(53, 13);
             this.lblPerimetro.TabIndex = 12;
@@ -117,13 +118,14 @@
             this.btnCriar.TabIndex = 8;
             this.btnCriar.Text = "Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
             // 
-            // textBox3
+            // txtraio
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 178);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtraio.Location = new System.Drawing.Point(137, 178);
+            this.txtraio.Name = "txtraio";
+            this.txtraio.Size = new System.Drawing.Size(100, 20);
+            this.txtraio.TabIndex = 7;
             // 
             // lblRaio
             // 
@@ -192,7 +194,6 @@
             this.cmbForma.Name = "cmbForma";
             this.cmbForma.Size = new System.Drawing.Size(199, 21);
             this.cmbForma.TabIndex = 0;
-            this.cmbForma.Visible = false;
             this.cmbForma.SelectedIndexChanged += new System.EventHandler(this.cmbForma_SelectedIndexChanged);
             // 
             // Form1
@@ -218,7 +219,7 @@
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.ComboBox cmbObjetos;
         private System.Windows.Forms.Button btnCriar;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtraio;
         private System.Windows.Forms.Label lblRaio;
         private System.Windows.Forms.TextBox txtBase;
         private System.Windows.Forms.TextBox txtaltura;
